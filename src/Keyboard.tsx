@@ -7,13 +7,13 @@ interface KeyboardProps {
 }
 
 export function Keyboard(props: KeyboardProps) {
-  const keyboard = props.layout
-    .split("-")
-    .map((row) =>
-      row
-        .split("")
-        .map((key) => key.replace("B", "Backspace").replace("E", "Enter"))
-    );
+  const keyboard = [
+    "! @ # $ % ^ & - ( )".split(" "),
+    "q w e r t y u i o p".split(" "),
+    "a s d f g h j k l".split(" "),
+    "Backspace z x c v b n m Enter".split(" "),
+  ];
+
 
   return (
     <div className="Game-keyboard" aria-hidden="true">
