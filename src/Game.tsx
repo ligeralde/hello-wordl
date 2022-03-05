@@ -122,7 +122,7 @@ function Game(props: GameProps) {
     setChallenge("");
     const newWordLength = limitLength(wordLength);
     setWordLength(newWordLength);
-    setTarget(myra!);
+    setTarget('myra!');
     setHint("");
     setGuesses([]);
     setCurrentGuess("");
