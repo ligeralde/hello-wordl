@@ -31,7 +31,7 @@ interface GameProps {
   keyboardLayout: string;
 }
 
-const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
+const targets = targetList; // Words no rarer than this one
 const minLength = 4;
 const defaultLength = 5;
 const maxLength = 11;
@@ -122,7 +122,7 @@ function Game(props: GameProps) {
     setChallenge("");
     const newWordLength = limitLength(wordLength);
     setWordLength(newWordLength);
-    setTarget('myra!');
+    setTarget(randomTarget(newWordLength));
     setHint("");
     setGuesses([]);
     setCurrentGuess("");
